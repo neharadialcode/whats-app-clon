@@ -27,6 +27,8 @@ body{
   overflow: hidden;
 }
 
+
+
 .sidebar {
   flex: 1;
   background-color: white;
@@ -237,5 +239,103 @@ height: 74px;
   padding: 20px;
   /* Content inside the right sidebar */
 }
+.cursor-pointer{
+  cursor: pointer !important;
+}
 
+.incoming_messages li span{
+  background-color: white;
+display: inline-block;
+position: relative;
+  /* max-width: 400px; */
+  padding: 14px 26px;
+  border-radius: 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.incoming_messages li span::after{
+  content: "5:20pm";
+  font-size: 9px;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+}
+.incoming_messages{
+  max-width: 70%;
+}
+.outgoing_messages li span{
+  background-color: #D9FDD3;
+display: inline-block; 
+position: relative;
+  /* max-width: 400px; */
+  padding: 14px 26px;
+  border-radius: 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.outgoing_messages li span::after{
+  background-color: #D9FDD3;
+display: inline-block; 
+position: relative;
+  /* max-width: 400px; */
+  padding: 14px 26px;
+  border-radius: 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.incoming_messages li:nth-child(1) span::before{
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid#fff;
+  border-bottom: 20px solid transparent;
+  border-top: 0px solid transparent;
+  display: inline-block;
+  top: 0;
+  left: -30px;
+}
+.outgoing_messages li:nth-child(1) span::before{
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  border-left: 20px solid 
+  #D9FDD3;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-top: 0px solid green;
+  display: inline-block;
+  top: 0; 
+  right: -30px;
+}
+
+
+.outgoing_messages li {
+  max-width: 70%;
+}
+.outgoing_messages{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
 /* ... Other styles ... */
+
+
+@media (max-width:1068px) {
+  
+  .app {
+    flex-direction: column;
+  }
+  
+  .message_text{ 
+    max-width: 220px; 
+  }
+
+.fs_20{
+  font-size: 16px;
+}
+  }
